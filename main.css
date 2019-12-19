@@ -14,7 +14,6 @@ body {
 }
 
 body {
-  border-top: 4px solid var(--orange);
   box-sizing: border-box;
   overflow: auto;
   padding-bottom: 100px;
@@ -53,18 +52,27 @@ h3 {
 }
 
 header {
+  border-top: 4px solid var(--orange);
   text-align: center;
   padding: 200px 0 175px;
+}
+header.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header.hide-border {
+  border-top-color: transparent;
 }
 
 nav {
   padding: 15px 0;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5);
   position: fixed;
   z-index: 1000;
   width: 100%;
   top: 25px;
+  transition: background-color 0.15s;
 }
 nav a {
   display: inline-block;
@@ -76,6 +84,9 @@ nav a {
 nav a:hover {
   color: var(--orange);
   text-decoration: none;
+}
+nav.gray-bg {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 section {
@@ -113,6 +124,10 @@ section:after {
   margin: 10px 0 0;
 }
 
+.work .image-wrapper {
+  text-align: center;
+}
+
 .white-bg {
   background: var(--bg-color);
 }
@@ -120,6 +135,20 @@ section:after {
 .orange-bg {
   --bg-color: var(--orange);
   background: var(--bg-color);
+}
+
+.carousel-control {
+  font-size: 35px;
+  color: var(--orange);
+}
+.carousel-control:focus {
+  opacity: 0.5;
+}
+.carousel-control:hover {
+  opacity: 0.9;
+}
+.carousel-control:hover, .carousel-control:focus {
+  color: var(--orange);
 }
 
 /*# sourceMappingURL=main.css.map */

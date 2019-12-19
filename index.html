@@ -8,20 +8,34 @@
   <link rel="shortcut icon" href="images/favicon.ico">
   <title>Scott Wedell | Front-End Engineer</title>
 
-  <link rel="stylesheet" type="text/css" href="./normalize.css">
+  <!-- Bootstrap Imports -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/dbc9fa90f0.js" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" type="text/css" href="./main.css">
 </head>
 
 <body>
+  <nav>
+    <a href="#skills">Skills</a>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#recommendations">Recommendations</a>
+  </nav>
   <header>
-    <nav>
-      <a href="#skills">Skills</a>
-      <a href="#about">About</a>
-      <a href="#recommendations">Recommendations</a>
-    </nav>
-    <div class="container">
+    <div class="container title-wrapper">
       <h1>
         <span>Scott Wedell</span>
         <span class="small mt-3">Front-End Engineer</span>
@@ -142,6 +156,131 @@
       </div>
     </div>
   </section>
+  <section id="work" class="work white-bg">
+    <div class="container">
+      <h2 class="mb-4">Work</h2>
+      <div class="row">
+        <div class="col-12 col-md-4 mb-3">
+          <div class="image-wrapper">
+            <a href="images/peg-game.png" onclick="openWorkModal(event, 'peg-game')">
+              <img src="images/peg-game-thumb.png" alt="Peg Game Thumbnail" class="border">
+            </a>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="proj-name list-group-item">
+              <a href="https://cracker-barrel.herokuapp.com/" target="_blank">Peg Game</a>
+            </li>
+            <li class="proj-role list-group-item">Developer</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <div class="image-wrapper">
+            <a href="images/suncrestbank.jpg" onclick="openWorkModal(event, 'suncrestbank')">
+              <img src="images/suncrestbank-thumb.jpg" alt="Suncrest Bank Thumbnail" class="border">
+            </a>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="proj-name list-group-item">
+              <a href="https://www.suncrestbank.com/" target="_blank">Suncrest Bank</a>
+            </li>
+            <li class="proj-role list-group-item">Launch FED</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <div class="image-wrapper">
+            <a href="images/bankcornerstone.jpg" onclick="openWorkModal(event, 'bankcornerstone')">
+              <img src="images/bankcornerstone-thumb.jpg" alt="Cornerstone Bank Thumbnail" class="border">
+            </a>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="proj-name list-group-item">
+              <a href="https://www.bankcornerstone.com" target="_blank">Cornerston Community Bank</a>
+            </li>
+            <li class="proj-role list-group-item">Launch FED</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <div class="image-wrapper">
+            <a href="images/mycentennial.jpg" onclick="openWorkModal(event, 'mycentennial')">
+              <img src="images/mycentennial-thumb.jpg" alt="Centennial Bank Thumbnail" class="border">
+            </a>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="proj-name list-group-item">
+              <a href="https://www.mycentennial.bank" target="_blank">Centennial Bank</a>
+            </li>
+            <li class="proj-role list-group-item">Launch FED</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <div class="image-wrapper">
+            <a href="images/benolds.jpg" onclick="openWorkModal(event, 'benolds')">
+              <img src="images/benolds-thumb.jpg" alt="Benolds Thumbnail" class="border">
+            </a>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="proj-name list-group-item">Benolds Jewelry</li>
+            <li class="proj-role list-group-item">Assistant Programmer</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <div class="image-wrapper">
+            <a href="images/reservelaketravis.jpg" onclick="openWorkModal(event, 'reservelaketravis')">
+              <img src="images/reservelaketravis-thumb.jpg" alt="Reserve at Lake Travis Thumbnail" class="border">
+            </a>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="proj-name list-group-item">The Reserve at Lake Travis</li>
+            <li class="proj-role list-group-item">Assistant Programmer</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal fade" id="workModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item peg-game">
+                    <img src="./images/peg-game.png" class="d-block w-100" alt="Peg Game">
+                  </div>
+                  <div class="carousel-item suncrestbank">
+                    <img src="images/suncrestbank.jpg" class="d-block w-100" alt="Suncrest Bank">
+                  </div>
+                  <div class="carousel-item bankcornerstone">
+                    <img src="images/bankcornerstone.jpg" class="d-block w-100" alt="Cornerstone Bank">
+                  </div>
+                  <div class="carousel-item mycentennial">
+                    <img src="images/mycentennial.jpg" class="d-block w-100" alt="Centennial Bank">
+                  </div>
+                  <div class="carousel-item benolds">
+                    <img src="images/benolds.jpg" class="d-block w-100" alt="Benolds">
+                  </div>
+                  <div class="carousel-item reservelaketravis">
+                    <img src="images/reservelaketravis.jpg" class="d-block w-100" alt="Reserve at Lake Travis">
+                  </div>
+                </div>
+                <a class="carousel-control carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <i class="fas fa-chevron-left"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <i class="fas fa-chevron-right"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
   <section id="about" class="about white-bg">
     <div class="container">
       <h2 class="mb-4">About</h2>
@@ -154,8 +293,8 @@
           </p> -->
           <p>I love learning new things and finding creative solutions to difficult challenges. With interests spanning
             technology, mathmatics, psychology, design, and more, I have found a career as a front-end engineer has
-            allowed me to satisfy my desire to work with logic and provided an outlet for creativity, while still maintaining
-            a connection with the human element.</p>
+            allowed me to satisfy my desire to work with logic and provided an outlet for creativity, while still
+            maintaining a connection with the human element.</p>
           <p>After graduating from Baylor University in 2008 with a BA in Philosophy I spent a few years working in the
             restaurant industry where I worked my way up to a management role. Balancing inventory, food and labor
             costs, and leading teams of cooks, servers, and support staff through busy shifts was fun and exciting work.
@@ -183,8 +322,8 @@
             code my responsibilities include mentoring other software engineers, updating technical documentation,
             working through product testing with QA, communicating with Product Services to understand client needs,
             helping Product Services integrate software updates, working closely with back-end engineers to define API
-            requirements, and collaborating with UX/UI designers to develop UIs that focus on user needs. As a
-            senior software engineer at CommScope I really enjoy the level of involvement I have thoughout the software
+            requirements, and collaborating with UX/UI designers to develop UIs that focus on user needs. As a senior
+            software engineer at CommScope I really enjoy the level of involvement I have thoughout the software
             development life cycle.</p>
 
           <!-- <p>My time with Kasasa has given me a real sense of project scope and how to deliver clients' needs while
@@ -237,5 +376,6 @@
     </div>
   </section>
 </body>
+<script src="./main.js"></script>
 
 </html>
