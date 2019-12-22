@@ -10,6 +10,8 @@ setTopSectionPosition();
 window.addEventListener('scroll', onScroll);
 $('#workModal').on('show.bs.modal', selectImg);
 
+window.addEventListener('resize', setTopSectionPosition);
+
 function onScroll() {
   const navOffset = nav.offsetHeight + nav.getBoundingClientRect().top;
   const sectionOffset = topSection.getBoundingClientRect().top;

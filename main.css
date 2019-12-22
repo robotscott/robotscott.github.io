@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -64,6 +68,9 @@ header.fixed {
 header.hide-border {
   border-top-color: transparent;
 }
+header .social {
+  font-size: 30px;
+}
 
 nav {
   padding: 15px 0;
@@ -78,15 +85,18 @@ nav a {
   display: inline-block;
   padding: 3px;
   margin: 0 10px;
-  color: white;
-  transition: color 0.15s;
-}
-nav a:hover {
-  color: var(--orange);
-  text-decoration: none;
 }
 nav.gray-bg {
   background: rgba(0, 0, 0, 0.5);
+}
+
+.white-links a {
+  color: white;
+  transition: color 0.15s;
+}
+.white-links a:hover {
+  color: var(--orange);
+  text-decoration: none;
 }
 
 section {
@@ -94,6 +104,10 @@ section {
   margin-bottom: 100px;
   padding: 60px 0;
   position: relative;
+}
+section .scroll-anchor {
+  position: absolute;
+  top: -25px;
 }
 section:before, section:after {
   background: linear-gradient(calc(-1 * var(--degree)), var(--bg-color) 5px, transparent 0), linear-gradient(var(--degree), var(--bg-color) 5px, transparent 0);
@@ -126,6 +140,9 @@ section:after {
 
 .work .image-wrapper {
   text-align: center;
+}
+.work .image-wrapper img {
+  max-width: 100%;
 }
 
 .white-bg {

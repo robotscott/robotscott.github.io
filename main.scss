@@ -5,8 +5,13 @@
   --bg-color: white;
 }
 
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -67,6 +72,9 @@ header {
   &.hide-border {
     border-top-color: transparent;
   }
+  .social {
+    font-size: 30px;
+  }
 }
 
 nav {
@@ -81,15 +89,20 @@ nav {
     display: inline-block;
     padding: 3px;
     margin: 0 10px;
+  }
+  &.gray-bg {
+    background: rgba(#000, 0.5);
+  }
+}
+
+.white-links {
+  a {
     color: white;
     transition: color 0.15s;
     &:hover {
       color: var(--orange);
       text-decoration: none;
     }
-  }
-  &.gray-bg {
-    background: rgba(#000, 0.5);
   }
 }
 
@@ -100,6 +113,11 @@ section {
   margin-bottom: 100px;
   padding: 60px 0;
   position: relative;
+
+  .scroll-anchor {
+    position: absolute;
+    top: -25px;
+  }
   &:before, &:after {
     background: 
       linear-gradient(calc(-1 * var(--degree)), var(--bg-color) 5px, transparent 0),
@@ -144,6 +162,9 @@ section {
 .work {
   .image-wrapper {
     text-align: center;
+    img {
+      max-width: 100%;
+    }
   }
 }
 
@@ -154,11 +175,6 @@ section {
 .orange-bg {
   --bg-color: var(--orange);
   background: var(--bg-color);
-}
-
-// Modal
-.modal {
-
 }
 
 // Carousel
